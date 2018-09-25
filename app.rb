@@ -3,6 +3,6 @@ require 'sinatra/activerecord'
 
 class App < Sinatra::Base
   get "/" do
-    erb :"/app/views/index"
+    erb :index
   end
 end
