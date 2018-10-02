@@ -19,8 +19,20 @@
   	<div class="logobar">
   		<h3 font-family="Open-Sans"> First Sinatra App! </h3>
   	</div>
-  	<table class="toptbl">
-  		<td><p>pogs</p></td>
-   	</table>
+  	
+	<div>
+		<script>
+			$.ajax({
+				url: 'http://www.ctabustracker.com/bustime/api/v1/getpredictions?key=uaAwsh6vFzfc4nc66z6YR6DNQ&rt=22&stpid=1836',
+			  	dataType: 'data/json',
+			  	format: 'json',
+			  	success: function(resp) {
+			  		console.log(resp)
+			  		document.append('<h5>22 - Deming</h5><br><p>${resp}</p>')
+			  	}
+			});
+		</script>
+	</div>
+
   </body>
 </html>
