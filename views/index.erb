@@ -21,17 +21,7 @@
   	</div>
   	
 	<div>
-		<script>
-			$.ajax({
-				url: 'http://ctabustracker.com/bustime/api/v2/getpredictions?key=uaAwsh6vFzfc4nc66z6YR6DNQ&rt=22&stpid=1836&format=json',
-			  	dataType: 'jsonp',
-			  	async: false,
-			  	success: function(resp) {
-			  		console.log(resp)
-			  		document.append('<h5>22 - Deming</h5><br><p>${resp}</p>')
-			  	}
-			});
-		</script>
+		<%= @twentytwodem %>
 	</div>
 
   </body>
