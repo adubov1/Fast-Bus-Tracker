@@ -1,28 +1,56 @@
 <!doctype html>
 <html>
-  <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126394770-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script src="https://www.googletagmanager.com/gtag/js?id=UA-126394770-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-      gtag('config', 'UA-126394770-1');
-    </script>
-    <link rel="stylesheet" href="css/normalize.css">
-  	<link rel="stylesheet" href="css/main.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  	<link href="https://fonts.googleapis.com/css?family=Open+Sans:600|Roboto:300" rel="stylesheet">
-  </head>
-  <body>
-  	<div class="logobar">
-  		<h3 font-family="Open-Sans"> First Sinatra App! </h3>
-  	</div>
-  	
-	<div>
-		<%= @twentytwodem %>
+		gtag('config', 'UA-126394770-1');
+	</script>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/moment-with-locales.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:600|Roboto:300" rel="stylesheet">
+</head>
+<body>
+	<div class="logobar">
+		<h3 font-family="Open-Sans"> Bus Times </h3>
 	</div>
-
-  </body>
+	<div class="prd">
+		<h4><b> 22 - Deming </b></h4>
+		<div id="22dem">
+			<script>
+				console.log(<%= @ttdem %>)
+				let ttdem = <%= @ttdem %>["bustime-response"].prd[0].prdtm.substr(9)
+				let ttdemS = ttdem.replace(/\D/g,'');
+				t = new Date();
+				h = t.getHours() * 100;
+				m = t.getMinutes();
+				time = h + m
+				console.log(time)
+				console.log(ttdemS-time)
+				$('#22dem').append(ttdemS-time)
+			</script>	
+		</div>
+		<br><h4><b> 36 - Deming </b></h4>
+		<div id="36dem">
+			<script>
+				console.log(<%= @tsdem %>)
+				let tsdem = <%= @tsdem %>["bustime-response"].prd[0].prdtm.substr(9)
+				let tsdemS = tsdem.replace(/\D/g,'');
+				t = new Date();
+				h = t.getHours() * 100;
+				m = t.getMinutes();
+				time = h + m
+				console.log(tsdemS)
+				console.log(Math.abs(new Date() - tsdemS))
+				$('#36dem').append(tsdemS-time)
+			</script>	
+		</div>
+	</div>
+</body>
 </html>
