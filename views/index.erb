@@ -22,8 +22,8 @@
 		<h3 font-family="Open-Sans"> Bus Times </h3>
 	</div>
 	<div class="prd">
-		<h4><b> 22 - Deming </b></h4>
-		<div id="22dem">
+		<h4><b> 22 | Deming </b></h4>
+		<b><div id="22dem" class="bxd">
 			<script>
 				console.log(<%= @ttdem %>)
 				let ttdem = <%= @ttdem %>["bustime-response"].prd[0].prdtm.substr(9)
@@ -36,9 +36,9 @@
 				console.log(ttdemS-time)
 				$('#22dem').append(ttdemS-time)
 			</script>	
-		</div>
-		<br><h4><b> 36 - Deming </b></h4>
-		<div id="36dem">
+		</div></b>
+		<br><h4><b> 36 | Deming </b></h4>
+		<b><div id="36dem" class="bxd">
 			<script>
 				console.log(<%= @tsdem %>)
 				let tsdem = <%= @tsdem %>["bustime-response"].prd[0].prdtm.substr(9)
@@ -51,7 +51,41 @@
 				console.log(Math.abs(new Date() - tsdemS))
 				$('#36dem').append(tsdemS-time)
 			</script>	
-		</div>
+		</div></b>
+		<br><h4><b> 22 | Division </b></h4>
+		<b><div id="22div" class="bxd">
+			<script>
+				console.log(<%= @ttdiv %>)
+				let ttdiv = <%= @ttdiv %>["bustime-response"].prd[0].prdtm.substr(9)
+				let ttdivS = ttdiv.replace(/\D/g,'');
+				t = new Date();
+				h = t.getHours() * 100;
+				m = t.getMinutes();
+				time = h + m
+				console.log(ttdivS)
+				console.log(Math.abs(new Date() - ttdivS))
+				$('#22div').append(ttdivS-time)
+			</script>	
+		</div></b>
+		<br><h4><b> 36 | Division </b></h4>
+		<b><div id="36div" class="bxd">
+			<script>
+				console.log(<%= @tsdiv %>)
+				let tsdiv = <%= @tsdiv %>["bustime-response"].prd[0].prdtm.substr(9)
+				let tsdivS = tsdiv.replace(/\D/g,'');
+				t = new Date();
+				h = t.getHours() * 100;
+				m = t.getMinutes();
+				time = h + m
+				console.log(tsdivS)
+				console.log(Math.abs(new Date() - tsdivS))
+				$('#36div').append(tsdivS-time)
+			</script>	
+		</div></b>
+
+
+
+
 	</div>
 </body>
 </html>

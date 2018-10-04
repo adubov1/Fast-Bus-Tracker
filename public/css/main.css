@@ -122,11 +122,23 @@ textarea {
 
 .prd {
     text-align: center;
-    position: relative;
-    width: 100%;
-    margin: auto;
 }
 
+h4 {
+    font-family: "Open-Sans";
+}
+
+.bxd {
+    border: 2px solid #4885ed;
+    border-radius:100px;
+    -moz-border-radius:100px;
+    -webkit-border-radius:100px;
+    display: inline;
+    padding-left: 6px;
+    padding-right: 7px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
 
 
 
