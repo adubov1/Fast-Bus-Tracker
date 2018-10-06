@@ -11,7 +11,6 @@
 
 		gtag('config', 'UA-126394770-1');
 	</script>
-	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:600|Roboto:300" rel="stylesheet">
@@ -24,29 +23,25 @@
 		<h4 font-family="Open-Sans"><b> 22 | Deming </b></h4>
 		<b><div id="22dem" class="bxd">
 			<script>
-				let ttdem = new Date("<%= @ttdem %>").getTime() - new Date().getTime()
-				$('#22dem').append(Math.round(ttdem / 60000))
+				$('#22dem').append(Math.round(<%=@ttdem%>))
 			</script>	
 		</div></b>
 		<br><h4 font-family="Open-Sans"><b> 36 | Deming </b></h4>
 		<b><div id="36dem" class="bxd">
 			<script>
-				let tsdem = new Date("<%= @tsdem %>").getTime() - new Date().getTime()
-				$('#36dem').append(Math.round(tsdem / 60000))
+				$('#36dem').append(Math.round(<%=@tsdem%>))
 			</script>	
 		</div></b>
 		<br><h4 font-family="Open-Sans"><b> 22 | Division </b></h4>
 		<b><div id="22div" class="bxd">
 			<script>
-				let ttdiv = new Date("<%= @ttdiv %>").getTime() - new Date().getTime()
-				$('#22div').append(Math.round(ttdiv / 60000))
+				$('#22div').append(Math.round(<%=@ttdiv%>))
 			</script>	
 		</div></b>
 		<br><h4 font-family="Open-Sans"><b> 36 | Division </b></h4>
 		<b><div id="36div" class="bxd">
 			<script>
-				let tsdiv = new Date("<%= @tsdiv %>").getTime() - new Date().getTime()
-				$('#36div').append(Math.round(tsdiv / 60000))
+				$('#36div').append(Math.round(<%=@tsdiv%>))
 			</script>	
 		</div></b>
 
