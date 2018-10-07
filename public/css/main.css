@@ -4,6 +4,9 @@ html {
     line-height: 1.4;
     font-family: 'Roboto', sans-serif;
 }
+body {
+    margin: 0px;
+}
 ::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
@@ -45,12 +48,9 @@ hr {
     text-align: center;
 }
 h4 {
-    font-family: "Open-Sans";
+    font-family: "Roboto";
 }
-h3 {
-    font-family: "Open-Sans";
-    font-display: block;
-}
+
 .bxd {
     color: #4885ed;
     font-family: 'Roboto', sans-serif;
