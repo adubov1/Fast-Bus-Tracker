@@ -47,16 +47,16 @@ hr {
 h4 {
     font-family: "Open-Sans";
 }
+h3 {
+    font-family: "Open-Sans";
+    font-display: block;
+}
 .bxd {
-    border: 2px solid #4885ed;
-    border-radius:100px;
-    -moz-border-radius:100px;
-    -webkit-border-radius:100px;
-    display: inline;
-    padding-left: 6px;
-    padding-right: 6px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    color: #4885ed;
+    font-family: 'Roboto', sans-serif;
+    font-size:  25px;
+    font-display: block;
+    font-weight: 300;
 }
 .hidden {
     display: none !important;
