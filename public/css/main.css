@@ -6,8 +6,7 @@ html {
 }
 body {
     margin: 0px;
-    padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
-    padding-top: env(safe-area-inset-top); /* iOS 11.2 */
+    
 }
 ::-moz-selection {
     background: #b3d4fc;
@@ -27,6 +26,8 @@ hr {
 }
 
 .logobar {
+    padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
+    padding-top: env(safe-area-inset-top); /* iOS 11.2 */
     background: #4885ed;
     width: 100%;
     text-align: center;
