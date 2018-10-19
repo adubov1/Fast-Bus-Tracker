@@ -4,6 +4,13 @@ require 'httparty'
 require 'json'
 require 'sinatra/reloader' if development?
 require 'yaml'
+require 'barnes'
+
+before_fork do
+  # worker specific setup
+
+  Barnes.start
+end
 
 class App < Sinatra::Base
 

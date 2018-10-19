@@ -9,3 +9,4 @@ gem "rake"  # so we can run Rake tasks
 gem "sinatra-activerecord"    # for Active Record models
 gem "httparty"
 gem "sinatra-contrib"
+gem "barnes"
