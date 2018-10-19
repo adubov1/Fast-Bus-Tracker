@@ -5,14 +5,13 @@ require 'json'
 require 'sinatra/reloader' if development?
 require 'yaml'
 require 'barnes'
+class App < Sinatra::Base
 
 before_fork do
   # worker specific setup
 
   Barnes.start
 end
-
-class App < Sinatra::Base
 
 	def getRoutes
 		cta_key = YAML.load(File.read("secret/cta_key.yml"))["key"]
