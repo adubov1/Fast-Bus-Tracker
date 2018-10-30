@@ -51,6 +51,13 @@ h4 {
     font-display: block;
     font-weight: 300;
 }
+.bxd2 {
+    color: #4885ed;
+    font-family: 'Roboto', sans-serif;
+    font-size:  15px;
+    font-display: inline-block;
+    font-weight: 300;
+}
 .hidden {
     display: none !important;
 }
