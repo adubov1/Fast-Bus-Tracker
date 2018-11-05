@@ -9,7 +9,7 @@ class App < Sinatra::Base
 	Barnes.start
 
 	def conv(x)
-		((Time.parse(x).to_f-Time.now.getlocal('-05:00').to_f)/60)+360 rescue nil
+		((Time.parse(x).to_f-Time.now.getlocal('-05:00').to_f)/60) rescue nil
 	end
 
 	def getRoutes
